@@ -1,0 +1,11 @@
+import smtplib
+smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
+smtpObj.ehlo()
+smtpObj.starttls()
+pw=input()
+lg=input()
+emailFrom=input()
+emailTo=input()
+smtpObj.login(lg,pw)
+smtpObj.sendmail(emailFrom,emailTo,'move your butt ...')
+smtpObj.quit()
